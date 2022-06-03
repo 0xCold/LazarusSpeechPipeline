@@ -1,19 +1,19 @@
 This program automates and performs the steps presented in https://github.com/Appen/UHV-OTS-Speech to easily create high-quality speech datasets through a number of pretrained machine learning models.
 
-Requirements:
+- Requirements:
     - Poetry installed
 
-Setup:
+- Setup:
     - The program parses the /input folder to create speaker datasets. 
     - Simply create a subfolder, named after the speaker, and include any audio files you want to be parsed.
     - Additionaly, you can include a file named sources.json with youtube videos to be scraped and downloaded (example in /input/JuiceWRLD)
 
-Running:
+- Running:
     - Once inputs are prepared, simply run the program with "poetry run python pipeline.py"
     - The pipeline will parse inputs, scrape audio sources, and run through each step of the pipeline as explained below
     - If some steps need to be excluded, they can be easily commented out in the main loop of pipeline.py
 
-Pipeline:
+- Pipeline:
     - Pre-Processing:
         - Synthetic Detection:
             - This model is trained to specifically detect synthetic speech (TTS) that if included in the speech dataset, would cause undesied results. 
